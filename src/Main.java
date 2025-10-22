@@ -36,3 +36,12 @@ public class Main {
             }
         }
     }
+    public static void mostrarMenu() {
+        System.out.println("   MENÚ   ");
+        System.out.println("a) Solicitar una cadena de caracteres.");
+        System.out.println("b) Visualizar el caracter de la posición x de la cadena.");
+        System.out.println("c) Convertir la cadena de caracteres en un número entero.");
+        System.out.println("d) Convertir la cadena de caracteres en una fecha (dd/MM/yyyy).");
+        System.out.println("e) Finalizar.");
+        System.out.print("Seleccione una opción: ");
+    }
