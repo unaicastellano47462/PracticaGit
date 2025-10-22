@@ -50,3 +50,8 @@ public class Main {
         cadena = scanner.nextLine();
         System.out.println("Cadena guardada correctamente.");
     }
+    public static void mostrarCaracter() {
+        if (cadena.isEmpty()) {
+            System.out.println("No hay cadena. Ingrese primero una cadena.");
+            solicitarCadena();
+        }
