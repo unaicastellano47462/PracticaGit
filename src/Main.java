@@ -70,3 +70,22 @@ public class Main {
             }
         }
     }
+    public static void convertirEntero() {
+        if (cadena.isEmpty()) {
+            System.out.println("No hay cadena. Ingrese primero una cadena.");
+            solicitarCadena();
+        }
+
+        boolean valido = false;
+        while (!valido) {
+            try {
+                int numero = Integer.parseInt(cadena);
+                System.out.println("La cadena convertida a entero es: " + numero);
+                valido = true;
+            } catch (NumberFormatException e) {
+                System.out.println("La cadena no se puede convertir a número entero.");
+                System.out.print("Ingrese una nueva cadena numérica: ");
+                cadena = scanner.nextLine();
+            }
+        }
+    }
