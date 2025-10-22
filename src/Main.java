@@ -55,3 +55,18 @@ public class Main {
             System.out.println("No hay cadena. Ingrese primero una cadena.");
             solicitarCadena();
         }
+        boolean valido = false;
+        while (!valido) {
+            try {
+                System.out.print("Ingrese la posición del carácter (empezando desde 0): ");
+                int posicion = Integer.parseInt(scanner.nextLine());
+                char caracter = cadena.charAt(posicion);
+                System.out.println("El carácter en la posición " + posicion + " es: " + caracter);
+                valido = true;
+            } catch (NumberFormatException e) {
+                System.out.println("Debe ingresar un número válido.");
+            } catch (IndexOutOfBoundsException e) {
+                System.out.println("Posición fuera de rango. La cadena tiene " + cadena.length() + " caracteres.");
+            }
+        }
+    }
