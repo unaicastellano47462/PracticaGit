@@ -45,3 +45,8 @@ public class Main {
         System.out.println("e) Finalizar.");
         System.out.print("Seleccione una opción: ");
     }
+    public static void solicitarCadena() {
+        System.out.print("Ingrese una cadena de caracteres: ");
+        cadena = scanner.nextLine();
+        System.out.println("Cadena guardada correctamente.");
+    }
