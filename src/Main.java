@@ -89,3 +89,25 @@ public class Main {
             }
         }
     }
+    public static void convertirFecha() {
+        if (cadena.isEmpty()) {
+            System.out.println("No hay cadena. Ingrese primero una cadena.");
+            solicitarCadena();
+        }
+
+        boolean valido = false;
+        while (!valido) {
+            try {
+                SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+                formato.setLenient(false);
+                Date fecha = formato.parse(cadena);
+                System.out.println("La cadena convertida a fecha es: " + fecha);
+                valido = true;
+            } catch (ParseException e) {
+                System.out.println("La cadena no tiene el formato de fecha válido (dd/MM/yyyy).");
+                System.out.print("Ingrese una nueva cadena con formato dd/MM/yyyy: ");
+                cadena = scanner.nextLine();
+            }
+        }
+    }
+}
